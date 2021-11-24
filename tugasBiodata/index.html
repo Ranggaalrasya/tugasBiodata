@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section>
+            <img src="1.png" data-speed="-5" class="layer">
+            <img src="2.png" data-speed="5" class="layer">
+            <img src="3.png" data-speed="2" class="layer">
+            <img src="4.png" data-speed="6" class="layer">
+            <img src="5.png" data-speed="8" class="layer">
+            <img src="6.png" data-speed="-2" class="layer">
+            <img src="7.png" data-speed="4" class="layer">
+            <img src="8.png" data-speed="-9" class="layer">
+            <img src="9.png" data-speed="6" class="layer">
+            <img src="10.png" data-speed="-7" class="layer">
+            <img src="11.png" data-speed="-5" class="layer">
+            <img src="12.png" data-speed="5" class="layer">
+            <h2 class="layer , glitch" data-speed="2">Rangga</h2>
+        </section>
+        <script type="text/javascript">
+            document.addEventListener("mousemove" , parallax);
+            function parallax(e){
+                this.querySelectorAll('.layer').forEach(layer => {
+                    const speed = layer.getAttribute('data-speed')
+
+                    const x = (window,innerWidth - e.pageX*speed)/100
+                    const y = (window,innerHeight - e.pageY*speed)/100
+
+                    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+
+                })
+            }
+        </script>
+    <div class="container">
+      <div class="profile">
+        <div class="profile-img">
+          <img src="sss.JPG" alt="Profile" />
+          <span>Bisa gak?</span>
+        </div>
+        <div class="profile-description">
+          <h1>Rangga Alrasya NA</h1>
+          <p>Android Developer</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="status">
+          <p>Bahasa fav</p>
+          <span><b>Python</b></span>
+        </div>
+        <hr />
+        <div class="status">
+          <p>Hobi</p>
+          <span><b>Piano, cardMagic</b></span>
+        </div>
+        <hr />
+        <div class="status">
+          <p>Usia</p>
+          <span><b>15</b></span>
+        </div>
+      </div>
+      <div class="skills">
+        <p>
+          <span>Skills :</span>
+          HTML, CSS, Python, PUBG, Bootstrap, Mobile Legend, Valorant and others
+        </p>
+      </div>
+      <div class="social">
+        <h2>Follow akuu</h2>
+        <div class="icons">
+          <a href="https://www.facebook.com/profile.php?id=100008673016710">
+            <img src="./svg/facebook-logo-2019.svg" alt="" />
+          </a>
+          <a href="https://www.instagram.com/heyitsrangga_/">
+            <img src="./svg/ig.png" alt="" />
+          </a>
+          <a href="https://github.com/Ranggaalrasya">
+            <img src="./svg/github.svg" alt="" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCtT6bjArKBUmdID2pk8pG-g"
+          >
+            <img src="./svg/youtube.svg" alt="" />
+          </a>
+          <a href="https://twitter.com/RanggaAlrasya">
+            <img src="./svg/twitter.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
